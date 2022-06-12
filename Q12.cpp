@@ -1,5 +1,8 @@
-// Merge Without Extra Space
-// link: https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays5135/1
+/*
+Title: Merge Without Extra Space
+link: https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays5135/1
+Complexity: Time - O((n+m)log(n+m)); Space - O(1)
+*/
 
 void merge(int arr1[], int arr2[], int n, int m) {
     int gap = ceil((float)(n+m)/2);
