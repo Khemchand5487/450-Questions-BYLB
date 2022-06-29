@@ -1,7 +1,7 @@
 /*
 Title: 74. Search a 2D Matrix
 Link: https://leetcode.com/problems/search-a-2d-matrix/
-Complexity: TIme - O(log()r+log(c)), Space - O(1)
+Complexity: TIme - O(log(r)+log(c)), Space - O(1)
 */
 
 class Solution {
