@@ -1,6 +1,6 @@
 /*
 Title: 38. Count and Say
-Link: https://leetcode.com/problems/count-and-say/submissions/
+Link: https://leetcode.com/problems/count-and-say/
 Complexity: TIme - O(N), Space - O(N)
 */
 
