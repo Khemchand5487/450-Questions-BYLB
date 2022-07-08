@@ -4,20 +4,18 @@ Link: https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string
 Complexity: TIme - O(n*n!), Space - O(n)
 */
 
-void permute(string s , string answer, set<string>& ans)
+void permute(string s, int index, set<string>& ans)
 {
-    if(s.length() == 0)
+    if(index == s.length())
     {
-        ans.insert(answer);
+        ans.insert(s);
         return;
     }
-    for(int i=0 ; i<s.length() ; i++)
+    for(int i=index ; i<s.length() ; i++)
     {
-        char ch = s[i];
-        string left_substr = s.substr(0,i);
-        string right_substr = s.substr(i+1);
-        string rest = left_substr + right_substr;
-        permute(rest , answer+ch, ans);
+        swap(s[index], s[i]);
+        permute(s, index+1, ans);
+        swap(s[index], s[i]);
     }
     
 }
@@ -25,7 +23,7 @@ vector<string> find_permutation(string S)
 {
     // Code here there
     set<string> ans;
-    permute(S, "", ans);
+    permute(S, 0, ans);
     
     vector<string> res(ans.begin(), ans.end());
     
